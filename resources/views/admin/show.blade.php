@@ -23,13 +23,13 @@
                     <div class="col-12 pb-3">
                         <strong>Price:</strong> {{ $comic->price }}
                     </div>
-                    <div class="col-12 pb-5">
+                    <div class="col-12 py-4 border-top border-bottom">
                         {{ $comic->description }}
                     </div>
-                    <div class="col-1 pb-3">
+                    <div class="col-1 py-3">
                         Artist:
                     </div>
-                    <div class="col-11 pb-3">
+                    <div class="col-11 py-3">
                         {{ $comic->artists }}
                     </div>
                     <div class="col-1 pb-3">

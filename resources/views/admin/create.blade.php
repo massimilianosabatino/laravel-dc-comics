@@ -3,7 +3,7 @@
 @section('page.main')
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col border p-4 rounded">
             <form action="{{ route('admin.store') }}" method="POST">
                 @csrf
                 <div class="mb-3">
