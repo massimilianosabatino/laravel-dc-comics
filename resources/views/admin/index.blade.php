@@ -13,20 +13,20 @@
                     <th scope="col">Type</th>
                     <th scope="col">Price</th>
                     <th scope="col">Sale date</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="align-middle">
                 @foreach ($comics as $comic)
                 <tr>
-                    {{ $comic->id }}
                     <th scope="row">{{ $comic->id }}</th>
                     <td><img class="img-fluid" src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></td>
-                    <td>{{ $comic->title }}</td>
                     <td>{{ $comic->series }}</td>
                     <td>{{ $comic->type }}</td>
+                    <td>{{ $comic->title }}</td>
                     <td>{{ $comic->price }}</td>
                     <td>{{ $comic->sale_date }}</td>
-                    <td><a href="{{ route('admin.show', $comic->id) }}">dettaglio</a></td>
+                    <td><a href="{{ route('admin.show', $comic->id) }}" class="btn btn-light">Details</a></td>
                 </tr>
                 @endforeach
             </tbody>
