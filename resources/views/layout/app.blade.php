@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Comics admin page</h1>
+        <h1 class="p-4">Comics admin page</h1>
 
     </header>
     <main>

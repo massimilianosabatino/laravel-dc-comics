@@ -43,8 +43,13 @@
                     <label for="writers" class="form-label">Writers</label>
                     <input type="text" class="form-control" id="writers" name="writers">
                 </div>
-                
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="row">
+                    <button type="submit" class="btn btn-primary col-auto mx-2">Submit</button>
+                    <button type="reset" class="btn btn-info col-auto mx-1">Reset</button>
+                    <div class="col-auto ms-auto">
+                        <a href="{{ route('admin.index') }}" class="btn btn-secondary">Back</a>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
