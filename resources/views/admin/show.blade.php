@@ -1,5 +1,9 @@
 @extends('layout.app')
 
+@section('page.title')
+    Comic details
+@endsection
+
 @section('page.main')
     <div class="container">
         <div class="row">

@@ -1,5 +1,9 @@
 @extends('layout.app')
 
+@section('page.title')
+    Comics admin page
+@endsection
+
 @section('page.main')
     <div class="container">
         {{-- Navigation button --}}

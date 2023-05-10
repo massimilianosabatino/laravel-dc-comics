@@ -9,14 +9,13 @@
 </head>
 <body>
     <header>
-        <h1 class="p-4">Comics admin page</h1>
-
+        <h1 class="p-4">@yield('page.title')</h1>
     </header>
     <main>
         @yield('page.main')
     </main>
     <footer>
-
+        <small><center>Classe 89 | Boolean</center></small>
     </footer>
 </body>
 </html>
