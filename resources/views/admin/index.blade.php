@@ -1,5 +1,11 @@
 @extends('layout.app')
 
 @section('page.main')
-    test admin route
+    
+    <ul>
+        @foreach ($comics as $comic)
+            <li>{{ $comic->title }}</li>
+        @endforeach
+    </ul>
+    
 @endsection
