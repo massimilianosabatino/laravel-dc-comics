@@ -1,5 +1,8 @@
 //Import Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+//Import Pages
+@import 'pages/admin';
+
 //Import Partials
-@import 'partials/variables'
+@import 'partials/variables';
