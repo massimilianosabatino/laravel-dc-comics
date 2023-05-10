@@ -17,7 +17,7 @@ class ComicsTableSeeder extends Seeder
     {
         //Get data from comics.php in config folder
         $comicsArray = config('comics');
-        $newComic = new Comic();
+        
 
         foreach($comicsArray as $comic){
             $newComic = new Comic();
