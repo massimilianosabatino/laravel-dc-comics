@@ -34,9 +34,9 @@
                         <tr>
                             <th scope="row">{{ $comic->id }}</th>
                             <td><img class="img-fluid" src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></td>
+                            <td>{{ $comic->title }}</td>
                             <td>{{ $comic->series }}</td>
                             <td>{{ $comic->type }}</td>
-                            <td>{{ $comic->title }}</td>
                             <td>{{ $comic->price }}</td>
                             <td>{{ $comic->sale_date }}</td>
                             <td><a href="{{ route('comics.show', $comic->id) }}" class="btn btn-light">Details</a></td>
