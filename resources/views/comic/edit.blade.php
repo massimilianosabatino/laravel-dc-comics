@@ -52,7 +52,7 @@
                     <button type="submit" class="btn btn-primary col-auto mx-2">Submit</button>
                     <button type="reset" class="btn btn-info col-auto mx-1">Reset</button>
                     <div class="col-auto ms-auto">
-                        <a href="{{ route('comics.index') }}" class="btn btn-secondary">Back</a>
+                        <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-secondary">Back</a>
                     </div>
                 </div>
             </form>
