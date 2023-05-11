@@ -47,7 +47,7 @@
         </div>
         <div class="row py-5">
             <div class="col-1 ms-auto">
-                <a href="{{ route('admin.index') }}" class="btn btn-light">Back</a>
+                <a href="{{ route('comics.index') }}" class="btn btn-light">Back</a>
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@
         {{-- Navigation button --}}
         <div class="row justify-content-end py-1">
             <div class="col-auto">
-                <a href="{{ route('admin.create') }}" class="btn btn-light">Add new comic</a>
+                <a href="{{ route('comics.create') }}" class="btn btn-light">Add new comic</a>
             </div>
         </div>
         {{-- /Navigation button --}}
@@ -39,7 +39,7 @@
                             <td>{{ $comic->title }}</td>
                             <td>{{ $comic->price }}</td>
                             <td>{{ $comic->sale_date }}</td>
-                            <td><a href="{{ route('admin.show', $comic->id) }}" class="btn btn-light">Details</a></td>
+                            <td><a href="{{ route('comics.show', $comic->id) }}" class="btn btn-light">Details</a></td>
                         </tr>
                         @endforeach
                     </tbody>

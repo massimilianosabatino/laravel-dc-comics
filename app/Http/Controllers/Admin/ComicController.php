@@ -17,7 +17,7 @@ class ComicController extends Controller
     {
         $comics = Comic::all();
 
-        return view('admin.index', compact('comics'));
+        return view('comic.index', compact('comics'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+        return view('comic.create');
     }
 
     /**
@@ -57,7 +57,7 @@ class ComicController extends Controller
         $newComic->save();
 
         //Return to list page
-        return redirect()->route('admin.show', $newComic->id);
+        return redirect()->route('comic.show', $newComic->id);
     }
 
     /**
@@ -66,10 +66,10 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::find($id);
-        return view('admin.show', compact('comic'));
+        // $comic = Comic::find($id);
+        return view('comic.show', compact('comic'));
     }
 
     /**

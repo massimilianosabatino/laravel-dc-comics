@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col border p-4 rounded">
-            <form action="{{ route('admin.store') }}" method="POST">
+            <form action="{{ route('comics.store') }}" method="POST">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
@@ -51,7 +51,7 @@
                     <button type="submit" class="btn btn-primary col-auto mx-2">Submit</button>
                     <button type="reset" class="btn btn-info col-auto mx-1">Reset</button>
                     <div class="col-auto ms-auto">
-                        <a href="{{ route('admin.index') }}" class="btn btn-secondary">Back</a>
+                        <a href="{{ route('comics.index') }}" class="btn btn-secondary">Back</a>
                     </div>
                 </div>
             </form>
