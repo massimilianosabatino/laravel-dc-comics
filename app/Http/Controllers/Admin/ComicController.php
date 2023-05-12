@@ -38,6 +38,11 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        //Validation
+        $request->validate([
+            'title' => 'required',
+        ]);
+
         //Get data from form
         $data = $request->all();
 
