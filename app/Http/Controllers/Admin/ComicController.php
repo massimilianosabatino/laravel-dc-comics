@@ -58,27 +58,29 @@ class ComicController extends Controller
         //     'artists' => 'nullable',
         //     'writers' => 'nullable'
         // ]);
-
+        $request->validated();
         //Get data from form
         $data = $request->all();
 
         //Create new instance
         $newComic = new Comic();
 
-        $newComic->title = $data['title'];
-        $newComic->description = $data['description'];
-        $newComic->thumb = $data['thumb'];
-        $newComic->price = $data['price'];
-        $newComic->series = $data['series'];
-        $newComic->sale_date = $data['sale_date'];
-        $newComic->type = $data['type'];
-        $newComic->artists = $data['artists'];
-        $newComic->writers = $data['writers'];
+        //Manual fill data
+        // $newComic->title = $data['title'];
+        // $newComic->description = $data['description'];
+        // $newComic->thumb = $data['thumb'];
+        // $newComic->price = $data['price'];
+        // $newComic->series = $data['series'];
+        // $newComic->sale_date = $data['sale_date'];
+        // $newComic->type = $data['type'];
+        // $newComic->artists = $data['artists'];
+        // $newComic->writers = $data['writers'];
 
+        $newComic->fill($data);
         $newComic->save();
 
         //Return to list page
-        return redirect()->route('comic.show', $newComic->id);
+        return redirect()->route('comics.show', $newComic->id);
     }
 
     /**
@@ -111,8 +113,10 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(ComicFormRequest $request, Comic $comic)
     {
+        // $request->validated();
+
         $data = $request->all();
 
         $comic->update($data);
