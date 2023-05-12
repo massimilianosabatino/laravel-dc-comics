@@ -33,10 +33,26 @@ class ComicFormRequest extends FormRequest
             'sale_date' => 'date',
             'type' => [
                 'max:30',
-                Rule::in(['comic book', 'graphic novel'])
+                Rule::in(['comic book', 'graphic novel']),
+                'nullable'
             ],
             'artists' => 'nullable',
             'writers' => 'nullable'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title' => ':attribute è obbligatorio',
+            'title.max' => 'Puoi inserire al massimo 50 caratteri compresi gli spazi',
+            'thumb' => 'Inserire un URL valido',
+            'thumb.ends:with' => "L'URL deve puntare ad un immagine jpg, png o webp",
+            'price' => 'Il prezzo deve contenere al massimo due cifre decimali e deve essere compreso tra 1 e 100',
+            'series' => 'Puoi inserire al massimo 55 caratteri compresi gli spazi',
+            'sale_date' => 'Devi inserire una data valida',
+            'type' => 'Selezionare il tipo',
+            'type.max' => 'Superato il massimo di 30 caratteri',
         ];
     }
 }
